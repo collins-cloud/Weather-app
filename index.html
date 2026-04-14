@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Weather app</title>
+</head>
+
+<body>
+  
+<div class="Container">
+  <div class="SearcArea">
+  <input id="SearchBox"type="text" placeholder="Enter city name..." spellcheck="false">
+  
+  <button id="SearchBtn">
+    <img src="SearchIcon.jpg">
+  </button>
+  </div>
+  
+  <p id="Error">city name is invalid</p>
+  
+  <div id="weather">
+  <p id="CityName">lagos</p>
+  
+<img id="WeatherImg"src="clear.png">
+
+<p id="temp">22°c</p>
+
+<div class="Wind-Humidty">
+  
+  <div class="HumiInfo">
+<img id="HumiImg"src="humidity.png">
+
+<div>
+  <p id="Humidity">50%</p>
+  <p>Humidity</p>
+</div>
+ </div>
+
+<div class="HumiInfo">
+<img id="HumiImg"src="wind.png">
+
+<div>
+  <p id="Wind">15km/h</p>
+  <p>wind speed</p>
+</div>
+
+</div>
+
+</div>
+
+   </div>
+   
+ </div>
+  
+  
+  <script>
+
+
+
+const SearchBox = document.getElementById("SearchBox");
+
+const SearchBtn = document.getElementById("SearchBtn");
+
+const Img = document.getElementById("WeatherImg");
+
+
+
+
+
+async function getWeather(city){
+  
+  const url = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=${city}&appid=f51762996650f3478823b017a0f0e820`;
+  
+
+const response = await fetch(url);
+
+const data = await response.json();
+
+const Weather = document.getElementById("weather");
+
+document.getElementById("temp").innerHTML=Math.round(data.main.temp)+ "°c";
+
+document.getElementById("Humidity").innerHTML=data.main.humidity + "%";
+
+document.getElementById("Wind").innerHTML= data.wind.speed + "km/h";
+
+document.getElementById("CityName").innerHTML = data.name;
+
+if( data.weather[0].main == "Clouds"){
+Img.src = "clouds.png";
+}else if (data.weather[0].main == "Clear"){
+  Img.src = "clear.png";
+}else if (data.weather[0].main == "Drizzle"){
+  Img.src = "drizzle.png";
+}else if (data.weather[0].main == "Mist"){
+  Img.src = "mist.png";
+}else if (data.weather[0].main == "Rain"){
+  Img.src = "rain.png";
+}else if (data.weather[0].main == "Snow"){
+  Img.src = "snow.png";
+};
+
+if(response.status == 404){
+document.getElementById("Error").style.display= "block";
+Weather.style.display = "none";
+}else{
+  document.getElementById("Error").style.display= "none";
+  Weather.style.display = "block";
+}
+
+
+
+
+};
+
+
+
+
+SearchBtn.addEventListener("click", ()=>{
+getWeather(SearchBox.value);
+}
+);
+
+  </script>
+</body>
+
+
+  </html>
