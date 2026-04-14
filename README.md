@@ -24,9 +24,9 @@ A simple and responsive weather application that allows users to search for any 
 
 ---
 
-📸 Preview
+# 📸 Preview
 
-"Weather App Screenshot" (./images/preview.png)
+[Screenshot](Screenshot_20260413-183248.jpg)
 
 ---
 
