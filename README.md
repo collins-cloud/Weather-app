@@ -32,7 +32,7 @@ A simple and responsive weather application that allows users to search for any 
 
 🌐 Live Demo
 
-👉 https://your-username.github.io/weather-app/
+👉 https://collins-cloud.github.io/Weather-app/
 
 ---
 
@@ -45,7 +45,7 @@ A simple and responsive weather application that allows users to search for any 
 
 ---
 
-💡 Future Improvements
+# 💡 Future Improvements
 
 - 📱 Make it fully mobile responsive
 - 📍 Add current location weather
@@ -54,12 +54,12 @@ A simple and responsive weather application that allows users to search for any 
 
 ---
 
-👨‍💻 Author
+# 👨‍💻 Author
 
-- Collins
+- **Collins**
 
 ---
 
-⭐️ Show Your Support
+# ⭐️ Show Your Support
 
-If you like this project, give it a ⭐️ on GitHub!
+**If you like this project, give it a ⭐️ on GitHub!**
