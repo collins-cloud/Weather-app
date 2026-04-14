@@ -1,0 +1,123 @@
+@font-face{
+font-family:'Poppins';
+src:url(Poppins-Regular.woff);
+}
+
+
+*{
+  font-family:Poppins;
+  box-sizing:border-box;
+  margin:0;
+  color:white;
+}
+
+body{
+background-color:#0B0C12;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+#SearchBox{
+  height:3em;
+  width:20em;
+  outline:none;
+  border:none;
+  border-radius:20px; 
+  padding-left:20px;
+  color:black;
+}
+
+#SearchBtn{
+  height:28px;
+  width:28px;
+  background-color:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:50%;
+  transition:0.5s;
+}
+
+#SearchBtn:hover{
+  height:30px;
+  width:30px;
+}
+
+#SearchBtn img{
+  width:300%;
+  border-radius:50%;
+}
+
+
+.SearcArea{
+  display:flex;
+  gap:15px;
+  justify-content:center;
+  align-items:center;
+}
+
+
+.Container{
+  background:linear-gradient(to right,#230451,#502B85);
+  padding:25px;
+  
+  width:22em;
+  border-radius:10px;
+}
+
+#CityName{
+  color:white;
+  font-size:30px;
+  text-align:center;
+  margin-top:15px;
+  font-weight:bold;
+}
+
+#WeatherImg{
+  display:block;
+  margin:0 auto;
+  width:190px;
+}
+
+#temp{
+  color:white;
+  font-size:30px;
+  text-align:center;
+  margin-top:15px;
+  font-weight:bold;
+}
+
+.Wind-Humidty{
+  display:flex;
+  justify-content:space-between;
+  margin-top:35px;
+  color: white;
+}
+
+.Wind-Humidty img{
+  width:40px;
+}
+
+.HumiInfo{
+  display:flex;
+  gap:15px;
+align-items:center;
+}
+
+.HumiInfo img{
+  width:30px;
+  height:30px;
+}
+
+#weather{
+  display:none;
+}
+
+#Error{
+font-size:13px;
+margin-top:14px;
+margin-left:4px;
+display:none;
+}
